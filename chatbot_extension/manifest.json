@@ -1,0 +1,39 @@
+{
+    "name":"Talk2Page",
+    "description": "",
+    "version":"0.1",
+    "manifest_version":3,
+    "action":{
+        "default_popup":"popup/popup.html"
+    },
+    "background":{
+        "service_worker":"background.js"
+    },
+    "permissions":[
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions":[
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://*/*"],
+          "css": [  "styles/bootstrap.min.css",
+                    "styles/custom_style.css"
+                ],
+          "js": ["scripts/content.js"]
+        }
+    ],
+    "web_accessible_resources":[
+        {
+            "resources":[
+                "images/minimize.png",
+                "styles/bootstrap.min.css",
+                "styles/custom_style.css"
+            ],
+            "matches":["https://*/*"]
+        }
+    ]
+}

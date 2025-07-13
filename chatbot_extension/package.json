@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@langchain/community": "^0.3.43",
+    "@langchain/core": "^0.3.56",
+    "@langchain/deepseek": "^0.0.1",
+    "bootstrap": "^5.3.6",
+    "chrome-types": "^0.1.350",
+    "dotenv": "^16.5.0",
+    "langchain": "^0.3.26",
+    "zod": "^3.25.13"
+  }
+}
