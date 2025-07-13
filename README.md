@@ -75,14 +75,23 @@ This starts the backend on http://127.0.0.1:8000.
 📄 Project structure:
 
 talk2page/
+
 ├── chatbot_extension/     # Chrome extension frontend
+
 │   ├── popup.html
+
 │   ├── popup.js
+
 │   └── ...
+
 ├── main.py               # FastAPI server entry point
+
 ├── chatbot.py            # AI logic & prompt
+
 ├── requirements.txt
+
 └── README.md
+
 
 ---
 
