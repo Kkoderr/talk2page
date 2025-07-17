@@ -1,5 +1,5 @@
 const get_ai_response = (user_input, chat_history)=>{
-    const fullHTML = (document.body?.innerText || document.body?.textContent || '').replace(/\s+/g, ' ').trim();
+    const fullHTML = (document.body?.innerText || document.body?.textContent).replace(/\s+/g, ' ').trim();
     return new Promise((resolve, reject)=>{
         chrome.runtime.sendMessage({type:"FETCH_DATA", html: fullHTML, user_query: user_input, chat_history:chat_history}, response => {
             if(chrome.runtime.lastError){
@@ -23,7 +23,8 @@ const appendChatBlock = (responder,chat)=>{
     const chat_block = document.createElement('div')
 
     chat_block.className = `chat-box border border-black rounded-4 p-2 ${responder=='User'?'human':'ai'}`;
-    chat_block.style.maxWidth = "90%";
+    chat_block.style.maxWidth = "80%";
+    chat_block.style.minWidth = "30%";
     chat_block.style.wordWrap = "break-word";
     chat_block.style.backgroundColor = responder === "User" ? "#DCF8C6" : "#F1F0F0";
     chat_block.style.alignSelf = responder === "User" ? "flex-end" : "flex-start";
