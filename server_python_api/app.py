@@ -33,9 +33,9 @@ def home():
 @app.post('/chatResponses')
 async def chat_responses(input_data: Input):
     try:
-        print(input_data)
         input_data_dict = input_data.model_dump()
         ai_response = await chatAI(input_data_dict)
+        print(ai_response)
         if ai_response.error:
             return JSONResponse(status_code=400, content={"error": ai_response.error})
         return JSONResponse(status_code=200, content=ai_response.model_dump())

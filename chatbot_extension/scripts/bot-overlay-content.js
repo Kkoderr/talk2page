@@ -14,7 +14,7 @@ if (!document.getElementById("bot-overlay")) {
     container.id = "bot-overlay";
     container.className = "container w-75";
     container.style.position = "fixed";
-    container.style.top = "100px";
+    container.style.top = "50px";
     container.style.left = "30px";
     container.style.maxWidth = "600px";
     container.style.zIndex = "9999";
@@ -22,7 +22,7 @@ if (!document.getElementById("bot-overlay")) {
 
     img_src = chrome.runtime.getURL("images/minimize.png");
 
-    const availableHeight = window.innerHeight - 120;
+    const availableHeight = window.innerHeight - 200;
 
     container.innerHTML = `
     <div style='margin-bottom: 8px;'>
