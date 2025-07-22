@@ -4,8 +4,8 @@ A Chrome extension + AI backend that lets you **chat with any webpage** to under
 
 Powered by FastAPI, Google Gemini, and LangChain.
 
-![Demo](assets/screenshot1.gif)
-![Demo](assets/screenshot2.gif)
+![Demo](assets/screenshot1.png)
+![Demo](assets/screenshot2.png)
 
 ---
 
