@@ -4,6 +4,9 @@ A Chrome extension + AI backend that lets you **chat with any webpage** to under
 
 Powered by FastAPI, Google Gemini, and LangChain.
 
+![Demo](assets/screenshot1.gif)
+![Demo](assets/screenshot2.gif)
+
 ---
 
 ## 🚀 Features
@@ -35,21 +38,21 @@ Powered by FastAPI, Google Gemini, and LangChain.
 git clone https://github.com/Kkoderr/talk2page.git
 cd talk2page
 
-2️⃣ Install backend dependencies
+### 2️⃣ Install backend dependencies
 
 pip install -r requirements.txt
 
-3️⃣ Set up environment
+### 3️⃣ Set up environment
 
 Create a .env file:
 GOOGLE_API_KEY=your_key_here
 
-4️⃣ Run the FastAPI server
+### 4️⃣ Run the FastAPI server
 
 uvicorn main:app --reload
 This starts the backend on http://127.0.0.1:8000.
 
-5️⃣ Load the Chrome Extension
+### 5️⃣ Load the Chrome Extension
 
 -Open chrome://extensions
 -Enable Developer mode
@@ -58,13 +61,13 @@ This starts the backend on http://127.0.0.1:8000.
 
 ---
 
-💡 How it works
-✅ The extension:
+## 💡 How it works
+### ✅ The extension:
 -Captures full page text (HTML → visible text)
 -Collects chat history
 -Sends data to FastAPI backend
 
-✅ The backend:
+### ✅ The backend:
 -Cleans HTML using BeautifulSoup
 -Builds a prompt with page content + chat history + user question
 -Calls Gemini via LangChain to get a structured answer
@@ -72,7 +75,7 @@ This starts the backend on http://127.0.0.1:8000.
 
 ---
 
-📄 Project structure:
+## 📄 Project structure:
 
 talk2page/
 
@@ -95,7 +98,7 @@ talk2page/
 
 ---
 
-📄 License:
+## 📄 License:
 This project is open source — feel free to fork and build on it!
 
 ---
